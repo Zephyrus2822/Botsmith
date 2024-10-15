@@ -50,7 +50,7 @@ const LandingPage = () => {
         <h1>Build and deploy better AI customer experiences</h1>
         <p>Ship tailored customer support and copilot automation, faster.</p>
         <div className="buttons">
-          <a href="#" className="primary-button">Start building, it's free</a>
+          <a href="/home" className="primary-button">Start building, it's free</a>
           <a href="#" className="secondary-button">Contact sales</a>
         </div>
       </main>
