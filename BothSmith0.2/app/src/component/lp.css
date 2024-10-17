@@ -1,0 +1,83 @@
+
+
+
+.hero-container {
+    background-color: #1c1c1c;
+    color: #fff;
+    padding: 20px;
+    height: 100vh;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li {
+    cursor: pointer;
+  }
+  
+  .auth-links {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .auth-links button {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .get-started {
+    background-color: #00aaff;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+  .hero-content {
+    text-align: center;
+    margin-top: 250px;
+  }
+  
+  .hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .hero-buttons button {
+    background-color: #00aaff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .hero-buttons .contact-sales {
+    background-color: transparent;
+    border: 2px solid #00aaff;
+  }
+  
