@@ -6,7 +6,7 @@ const LandingPage = () => {
     <div className="hero-container">
       
       <div className="navbar">
-        <div className="logo">Voiceflow</div>
+        <div className="logo"><a href="/">Voiceflow</a></div>
         <ul className="nav-links">
           <li>Platform</li>
           <li>Solutions</li>
@@ -16,7 +16,7 @@ const LandingPage = () => {
         </ul>
         
         <div className="auth-links">
-          <button>Sign in</button>
+          <button className='sign-in'>Sign in</button>
           <button className="get-started">Get started</button>
         </div>
       </div>
@@ -26,7 +26,7 @@ const LandingPage = () => {
         <p>Avoid AI blackboxes. Deploy and scale tailored AI agents to automate customer interactions.</p>
         <div className="hero-buttons">
           <button className="start-building"><a href="/home">Start building, it's free</a></button>
-          <button className="contact-sales">Contact sales</button>
+          <button className="contact-sales"><a href="#">Contact sales</a></button>
         </div>
       </div>
     </div>
