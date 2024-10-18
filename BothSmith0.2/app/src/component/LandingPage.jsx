@@ -6,7 +6,7 @@ const LandingPage = () => {
     <div className="hero-container">
       
       <div className="navbar">
-        <div className="logo"><a href="/">Voiceflow</a></div>
+        <div className="logo"><a href="/">BotSmith</a></div>
         <ul className="nav-links">
           <li>Platform</li>
           <li>Solutions</li>
