@@ -6,7 +6,7 @@ const Home = () => {
     <div className="dashboard-container">
       <aside className="sidebar">
         <div className="sidebar-header">
-          <div className="workspace-logo">My-Workspace</div>
+          <div className="workspace-logo">My Workspace</div>
         </div>
         <ul className="sidebar-menu">
           <li>Agents</li>
@@ -32,13 +32,13 @@ const Home = () => {
         <header className="main-header">
           <h1>All Agents</h1>
           <div className="header-actions">
-            <button>Invite</button>
+            <button className='invite'><a href="#">Invite</a></button>
             <button className="new-agent"><a href="/botbuilder">New Agent</a></button>
           </div>
         </header>
         <section className="content">
           <div className="tutorial-banner">
-            <p>Learn Voiceflow with video tutorials</p>
+            <p>Learn BotSmith with video tutorials</p>
             <button><a href="/botbuilder">Start Course</a></button>
           </div>
           <div className="agent-search">
@@ -46,7 +46,9 @@ const Home = () => {
           </div>
           <div className="agent-list">
             <div className="agent-card">
-              <div className="agent-image"></div>
+              <div className="agent-image">
+                {/* need to put an image here  */}
+              </div>
               <div className="agent-details">
                 <p className="agent-title">Untitled agent</p>
                 <p className="agent-meta">Last edited 10 days ago</p>
@@ -59,12 +61,12 @@ const Home = () => {
               <div className="template-card">
                 <div className="template-image"></div>
                 <p className="template-title">Retail Purchases (Webchat)</p>
-                <p className="template-meta">By Voiceflow</p>
+                <p className="template-meta">By BotSmith</p>
               </div>
               <div className="template-card">
                 <div className="template-image"></div>
                 <p className="template-title">Support Chatbot (Webchat)</p>
-                <p className="template-meta">By Voiceflow</p>
+                <p className="template-meta">By BotSmith</p>
               </div>
             </div>
           </div>
