@@ -1,36 +1,40 @@
-import React, { useState } from 'react';
-import { Card, CardContent } from '/components/ui/card';
-import { Button } from '/components/ui/button';
-import { MessageCircle, List, ArrowRight } from 'lucide-react';
-
-
+import React, { useState } from "react";
+import { Card, CardContent } from "/components/ui/card";
+import { Button } from "/components/ui/button";
+import { MessageCircle, List, ArrowRight } from "lucide-react";
 
 const botComponents = [
-    { id: 'greeting', content: 'Greeting', icon: MessageCircle },
-    { id: 'menu', content: 'Menu', icon: List },
-    { id: 'response', content: 'Response', icon: ArrowRight },
-  ];
+  { id: "greeting", content: "Greeting", icon: MessageCircle },
+  { id: "menu", content: "Menu", icon: List },
+  { id: "response", content: "Response", icon: ArrowRight },
+];
 
 const Botbuilder = () => {
+  const [workspace, setWorkspace] = useState([]);
 
-    const [workspace, setWorkspace] = useState([]);
+  const onDragStart = (e, id) => {
+    e.dataTransfer.setData("text/plain", id);
+  };
 
-    const onDragStart = (e, id) => {
-      e.dataTransfer.setData('text/plain', id);
-    };
-  
-    const onDragOver = (e) => {
-      e.preventDefault();
-    };
-  
-    const onDrop = (e) => {
-      e.preventDefault();
-      const id = e.dataTransfer.getData('text');
-      const component = botComponents.find(item => item.id === id);
-      if (component) {
-        setWorkspace([...workspace, { ...component, key: `${component.id}-${Date.now()}` }]);
-      }
-    };
+  const onDragOver = (e) => {
+    e.preventDefault();
+  };
+
+  const onDrop = (e) => {
+    e.preventDefault();
+    const id = e.dataTransfer.getData("text");
+    const component = botComponents.find((item) => item.id === id);
+    if (component) {
+      setWorkspace([
+        ...workspace,
+        { ...component, key: `${component.id}-${Date.now()}` },
+      ]);
+    }
+  };
+
+  const handleRemove = (key) => {
+    setWorkspace(workspace.filter((item) => item.key !== key));
+  };
 
   return (
     <div className="flex h-screen bg-gray-100">
@@ -55,7 +59,9 @@ const Botbuilder = () => {
         </div>
       </div>
       <div className="flex-1 p-8">
-        <h1 className="text-2xl h-auto font-bold mb-4">Bot Builder Workspace</h1>
+        <h1 className="text-2xl h-auto font-bold mb-4">
+          Bot Builder Workspace
+        </h1>
         <div
           onDragOver={onDragOver}
           onDrop={onDrop}
@@ -68,14 +74,30 @@ const Botbuilder = () => {
                   <item.icon className="mr-2" />
                   <span>{item.content}</span>
                 </div>
-                <Button variant="outline" size="sm">Edit</Button>
+                <div className="justify-between gap-4 p-3 flex">
+                  <Button
+                    className="p-2 font-bold text-1xl text-black-900"
+                    variant="outline"
+                    size="sm"
+                  >
+                    Edit
+                  </Button>
+                  <Button
+                    className="p-2 font-bold text-1xl text-black-900"
+                    variant="outline"
+                    size="sm"
+                    onClick={() => handleRemove(item.key)}
+                  >
+                    Remove
+                  </Button>
+                </div>
               </CardContent>
             </Card>
           ))}
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Botbuilder
+export default Botbuilder;

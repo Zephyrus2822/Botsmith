@@ -10,11 +10,7 @@ const Home = () => {
         </div>
         <ul className="sidebar-menu">
           <li>Agents</li>
-          <li>Team & Billing</li>
-          <li>Learn</li>
           <li>Templates</li>
-          <li>What's New</li>
-          <li>Discord Community</li>
           <li>Hire an Expert</li>
         </ul>
         <div className="sidebar-footer">
