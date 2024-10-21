@@ -26,7 +26,7 @@ const LandingPage = () => {
         <p>Avoid AI blackboxes. Deploy and scale tailored AI agents to automate customer interactions.</p>
         <div className="hero-buttons">
           <button className="start-building"><a href="/home">Start building, it's free</a></button>
-          <button className="contact-sales"><a href="#">Contact sales</a></button>
+          <button className="contact-sales"><a href="/contact">Contact sales</a></button>
         </div>
       </div>
     </div>

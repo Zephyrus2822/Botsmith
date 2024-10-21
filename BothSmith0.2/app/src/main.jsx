@@ -3,7 +3,8 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import LandingPage from './component/LandingPage';
 import BotBuilder from './component/BotBuilder';
-import Home from './component/Home';  
+import Home from './component/Home';
+import ContactForm from './component/ContactForm';  
 import './index.css';
 
 createRoot(document.getElementById('root')).render(
@@ -12,7 +13,7 @@ createRoot(document.getElementById('root')).render(
     <BrowserRouter>
   
       <Routes>
-        
+        <Route path="/contact" element={<ContactForm/>} />
         <Route path="/" element={<LandingPage />} /> 
         <Route path="/home" element={<Home />} />     
         <Route path="/botbuilder" element={<BotBuilder />} /> 
