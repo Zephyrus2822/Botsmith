@@ -19,7 +19,7 @@ const Home = () => {
         </ul>
         <div className="sidebar-footer">
           <div className="upgrade-notice">
-            <p>4 days left on Team trial</p>
+            <p></p>
             <button>Upgrade Now</button>
           </div>
           <button>Contact Sales</button>
@@ -45,30 +45,12 @@ const Home = () => {
             <input type="text" placeholder="Search agents" />
           </div>
           <div className="agent-list">
-            <div className="agent-card">
-              <div className="agent-image">
-                {/* need to put an image here  */}
-              </div>
-              <div className="agent-details">
-                <p className="agent-title">Untitled agent</p>
-                <p className="agent-meta">Last edited 10 days ago</p>
-              </div>
-            </div>
           </div>
           <div className="templates-section">
             <h2>Start with a template</h2>
-            <div className="template-cards">
-              <div className="template-card">
-                <div className="template-image"></div>
-                <p className="template-title">Retail Purchases (Webchat)</p>
-                <p className="template-meta">By BotSmith</p>
-              </div>
-              <div className="template-card">
-                <div className="template-image"></div>
-                <p className="template-title">Support Chatbot (Webchat)</p>
-                <p className="template-meta">By BotSmith</p>
-              </div>
-            </div>
+          </div>
+          <div className="agent-search">
+            <input type="text" placeholder="Search template" />
           </div>
         </section>
       </main>
